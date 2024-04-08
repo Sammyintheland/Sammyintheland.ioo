@@ -3,36 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mental Health Website</title>
+    <title>More Advanced Website</title>
     <style>
+        /* Advanced CSS styles */
         body {
             font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
         }
+
         header {
             background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
+
         nav {
-            background-color: #666;
+            background-color: #444;
+            color: #fff;
             padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
             text-align: center;
         }
-        nav a {
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
             color: #fff;
             text-decoration: none;
             padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
-        nav a:hover {
-            background-color: #999;
+
+        nav ul li a:hover {
+            background-color: #666;
         }
+
         section {
             padding: 20px;
         }
+
         footer {
             background-color: #333;
             color: #fff;
@@ -42,30 +63,58 @@
             bottom: 0;
             width: 100%;
         }
+
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <h1>More Advanced Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" id="homeLink">Home</a></li>
+            <li><a href="#" id="aboutLink">About</a></li>
+            <li><a href="#" id="servicesLink">Services</a></li>
+            <li><a href="#" id="contactLink">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="mainContent">
+        <h2>Welcome to our More Advanced Website!</h2>
+        <p>This is a demonstration of a more advanced HTML website with custom styling and interactivity.</p>
+        <button class="button" id="showMessageBtn">Show Message</button>
+        <div id="message" style="display: none;">
+            <p>This is a hidden message. You can reveal it by clicking the button above.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 More Advanced Website. All rights reserved.</p>
+    </footer>
 
-<header>
-    <h1>Mental Health Website</h1>
-</header>
-
-<nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Resources</a>
-    <a href="#">Contact</a>
-</nav>
-
-<section>
-    <h2>Welcome to our Mental Health Website!</h2>
-    <p>This website is dedicated to providing resources and support for those struggling with mental health issues.</p>
-    <p>Feel free to explore the various sections and find the help you need.</p>
-</section>
-
-<footer>
-    <p>&copy; 2024 Mental Health Website</p>
-</footer>
-
+    <script>
+        // Advanced JavaScript for interactivity
+        document.getElementById('showMessageBtn').addEventListener('click', function() {
+            var messageDiv = document.getElementById('message');
+            if (messageDiv.style.display === 'none') {
+                messageDiv.style.display = 'block';
+            } else {
+                messageDiv.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
